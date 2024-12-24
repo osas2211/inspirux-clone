@@ -18,8 +18,8 @@ export const AnimationContainer = ({
     // const progress = Number(tl.current.progress() * 100).toFixed(0)
     // setCount(Number(progress))
 
-    const duration = 3000 // Total duration in ms (3 seconds)
-    const interval = 30 // Update every 30ms
+    const duration = 5000 // Total duration in ms (3 seconds)
+    const interval = 50 // Update every 30ms
     const increment = 300 / (duration / interval) // Amount to increment per interval
 
     const timer = setInterval(() => {
@@ -100,14 +100,16 @@ export const AnimationContainer = ({
   return (
     <div ref={scope}>
       <div className="fixed top-0 left-0 w-full h-screen z-[300] bg-[#101012] text-white screen-loader">
-        <div className="flex h-full flex-col justify-between p-10">
+        <div className="flex h-full flex-col justify-between p-10 pb-0">
           <div className="text-[40px] overflow-hidden">
             <h2 className="screen-loader-details">
               Inspirux clone is loading...
             </h2>
           </div>
           <div className="overflow-hidden text-end">
-            <h2 className="text-[170px] screen-loader-details">{count}%</h2>
+            <h2 className="text-[200px] screen-loader-details leading-[105%]">
+              {count}%
+            </h2>
           </div>
         </div>
       </div>

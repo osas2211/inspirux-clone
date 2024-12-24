@@ -81,9 +81,9 @@ export const Works = () => {
           </div>
         </div>
       </div>
-      <div className="min-h-[340vh] pl-[40px] py-[100px] bg-[#f9faf7] border-y-[1px] border-y-[#101012]">
+      <div className="min-h-[340vh] pl-[40px] 2xl:py-[100px] md:py-[78px] bg-[#f9faf7] border-y-[1px] border-y-[#101012]">
         <div
-          className="uppercase text-sm sticky top-[70px] min-w-[640.5px] -mb-[160px] about-sticky"
+          className="uppercase text-sm md:sticky md:top-[70px] 2xl:min-w-[640.5px] md:min-w-[30%] md:-mb-[160px] about-sticky"
           ref={textRevealScope}
         >
           <p className="overflow-hidden">
@@ -115,7 +115,7 @@ export const Works = () => {
         </div>
 
         <div className="flex">
-          <div className="min-w-[600.5px]"></div>
+          <div className="2xl:min-w-[600.5px] md:min-w-[30%]"></div>
           <div className="w-full overflow-x-hidden" id="selected-work-links">
             {works.map((work, index) => {
               return (
@@ -128,7 +128,9 @@ export const Works = () => {
                   </p>
                   <div className="w-full border-b-[1px] border-b-[#101012] py-10 pr-10 flex items-center justify-between">
                     <div>
-                      <p className="text-[64px]">{work.title}</p>
+                      <p className="2xl:text-[64px] md:text-[52px]">
+                        {work.title}
+                      </p>
                       <p className="text-sm">{work.subText}</p>
                     </div>
                     <div>

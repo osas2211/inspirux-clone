@@ -8,10 +8,10 @@ export const About = () => {
   const { scope: smallScope } = useTextReveal(".about-text-reveal-small")
   return (
     <div
-      className="w-full min-h-[100vh] bg-[#f9faf7] px-[40px] py-[180px] about-section"
+      className="w-full min-h-[100vh] bg-[#f9faf7] md:px-[40px] px-5 2xl:py-[180px] md:py-[130px] py-[70px] about-section"
       ref={scope}
     >
-      <div className="uppercase text-sm sticky top-[70px] min-w-[640.5px] -mb-[60px] about-sticky">
+      <div className="uppercase md:text-sm text-xs md:sticky md:top-[70px] 2xl:min-w-[640.5px] md:min-w-[30%] md:-mb-[60px] mb-[30px] about-sticky">
         <p className="overflow-hidden">
           <span className="about-text-reveal">
             WE BELIEVE IN THE POWER OF DESIGN
@@ -27,9 +27,9 @@ export const About = () => {
         </p>
       </div>
       <div className="flex">
-        <div className="min-w-[640.5px]"></div>
-        <div className="text-[40px] relative about-text">
-          <div>
+        <div className="2xl:min-w-[640.5px] md:min-w-[30%]"></div>
+        <div className="2xl:text-[40px] md:text-[32px] text-[19px] relative about-text md:w-[70%] w-full">
+          <div className="md:block hidden">
             <h2 className="overflow-hidden">
               <span className="about-text-reveal">
                 — Its our commitment to excellence that
@@ -61,17 +61,67 @@ export const About = () => {
               </span>
             </h2>
           </div>
-          <div className="mt-[50px] mb-[30px]">
+          <div className="md:hidden block">
             <h2 className="overflow-hidden">
               <span className="about-text-reveal">
-                Our mission is to empower global enterprises to
+                — Its our commitment to excellence that
               </span>
             </h2>
-            <h2 className="overflow-hidden about-last-text">
+            <h2 className="overflow-hidden">
               <span className="about-text-reveal">
-                unlock their maximum capabilities.
+                distinguishes us. Our expertise spans the realms of branding,
+                UI/UX design, and
               </span>
             </h2>
+            <h2 className="overflow-hidden">
+              <span className="about-text-reveal">
+                development, where we employ a strategic
+              </span>
+            </h2>
+            <h2 className="overflow-hidden">
+              <span className="about-text-reveal">
+                approach. We seamlessly coordinate
+              </span>
+            </h2>
+            <h2 className="overflow-hidden">
+              <span className="about-text-reveal">
+                coordinate across various disciplines and
+              </span>
+            </h2>
+            <h2 className="overflow-hidden">
+              <span className="about-text-reveal">
+                services to craft exceptional products.
+              </span>
+            </h2>
+          </div>
+          <div className="2xl:mt-[50px] md:mt-[40px] mt-7 mb-[30px]">
+            <div className="md:block hidden">
+              <h2 className="overflow-hidden">
+                <span className="about-text-reveal">
+                  Our mission is to empower global enterprises to
+                </span>
+              </h2>
+              <h2 className="overflow-hidden about-last-text">
+                <span className="about-text-reveal">
+                  unlock their maximum capabilities.
+                </span>
+              </h2>
+            </div>
+            <div className="md:hidden block">
+              <h2 className="overflow-hidden">
+                <span className="about-text-reveal">
+                  Our mission is to empower global
+                </span>
+              </h2>
+              <h2 className="overflow-hidden about-last-text">
+                <span className="about-text-reveal">
+                  enterprises to unlock their maximum
+                </span>
+              </h2>
+              <h2 className="overflow-hidden about-last-text">
+                <span className="about-text-reveal">capabilities.</span>
+              </h2>
+            </div>
           </div>
           <div>
             <Link
@@ -82,7 +132,7 @@ export const About = () => {
             </Link>
           </div>
           <div
-            className="flex justify-end items-end mt-[150px] text-xs uppercase"
+            className="flex justify-end items-end 2xl:mt-[150px] md:mt-[100px] mt-8 md:text-xs text-[10px] uppercase"
             id="about-keep-scrolling"
             ref={smallScope}
           >
