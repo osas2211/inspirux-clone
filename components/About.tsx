@@ -11,7 +11,7 @@ export const About = () => {
       className="w-full md:min-h-[100vh] my-0 bg-[#f9faf7] md:px-[40px] px-5 2xl:py-[180px] md:py-[130px] py-[70px] about-section"
       ref={scope}
     >
-      <div className="uppercase md:text-sm text-xs md:sticky md:top-[70px] 2xl:min-w-[640.5px] md:min-w-[30%] md:-mb-[60px] mb-[30px] about-sticky">
+      <div className="uppercase md:text-sm text-[10px] md:sticky md:top-[70px] 2xl:min-w-[640.5px] md:min-w-[30%] md:-mb-[60px] mb-[30px] about-sticky">
         <p className="overflow-hidden">
           <span className="about-text-reveal">
             WE BELIEVE IN THE POWER OF DESIGN
@@ -26,7 +26,7 @@ export const About = () => {
           <span className="about-text-reveal">TRANSFORM BRANDS.</span>
         </p>
       </div>
-      <div className="flex">
+      <div className="flex font-medium">
         <div className="2xl:min-w-[640.5px] md:min-w-[30%]"></div>
         <div className="2xl:text-[40px] md:text-[32px] text-[19px] relative about-text md:w-[70%] w-full">
           <div className="md:block hidden">
@@ -64,33 +64,25 @@ export const About = () => {
           <div className="md:hidden block">
             <h2 className="overflow-hidden">
               <span className="about-text-reveal">
-                — Its our commitment to excellence that
+                — Its our commitment to excellence that distinguishes us. Our
+                expertise
               </span>
             </h2>
             <h2 className="overflow-hidden">
               <span className="about-text-reveal">
-                distinguishes us. Our expertise spans the realms of branding,
-                UI/UX design, and
+                spans the realms of branding, UI/UX design, and development,
+                where we
               </span>
             </h2>
             <h2 className="overflow-hidden">
               <span className="about-text-reveal">
-                development, where we employ a strategic
+                employ a strategic approach. We seamlessly coordinate across
+                various
               </span>
             </h2>
             <h2 className="overflow-hidden">
               <span className="about-text-reveal">
-                approach. We seamlessly coordinate
-              </span>
-            </h2>
-            <h2 className="overflow-hidden">
-              <span className="about-text-reveal">
-                coordinate across various disciplines and
-              </span>
-            </h2>
-            <h2 className="overflow-hidden">
-              <span className="about-text-reveal">
-                services to craft exceptional products.
+                disciplines and services to craft exceptional products.
               </span>
             </h2>
           </div>
