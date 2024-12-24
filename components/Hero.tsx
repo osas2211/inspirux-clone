@@ -16,7 +16,7 @@ export const Hero = () => {
           </h2>
           <h2 className="text-[#eee] tracking-tight relative inline-block">
             <span>races to victory!</span>
-            <span className="text-[#eeeeeeea] md:text-[16px] md:leading-[24px] text-[12px] leading-4 2xl:text-[22px] 2xl:leading-[32px] block absolute 2xl:-top-[140px] lg:-top-[85px] top-[115px] md:right-0 left-0 tracking-normal 2xl:max-w-[250px] md:max-w-[180px] max-w-[80%]">
+            <span className="text-[#eeeeeeea] md:text-[16px] md:leading-[24px] text-[12px] leading-4 2xl:text-[22px] 2xl:leading-[32px] block absolute 2xl:-top-[140px] lg:-top-[85px] top-[115px] md:right-0 tracking-normal 2xl:max-w-[250px] md:max-w-[180px] max-w-[80%]">
               Inspirux® is a strategic design company giving global brands an
               edge.
             </span>

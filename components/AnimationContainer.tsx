@@ -85,6 +85,9 @@ export const AnimationContainer = ({
             scrollTrigger: {
               trigger: scope.current?.querySelectorAll("#selected-work-links"),
               scrub: true,
+              end: window?.matchMedia("(max-width: 760px)")?.matches
+                ? "+=1500px"
+                : "+=2500px",
             },
           }
         )

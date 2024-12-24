@@ -14,7 +14,7 @@ export const Works = () => {
   const works = [
     {
       title: "orbital",
-      subText: "website + app portal",
+      subText: "website + web app portal",
     },
     {
       title: "bentley",
@@ -81,7 +81,7 @@ export const Works = () => {
           </div>
         </div>
       </div>
-      <div className="min-h-[340vh] md:pl-[40px] pl-5 2xl:py-[100px] md:py-[78px] py-10 bg-[#f9faf7] border-y-[1px] border-y-[#101012]">
+      <div className="md:min-h-[340vh] md:pl-[40px] pl-5 2xl:py-[100px] md:py-[78px] py-10 bg-[#f9faf7] border-y-[1px] border-y-[#101012]">
         <div
           className="uppercase md:text-sm text-xs md:sticky md:top-[70px] 2xl:min-w-[640.5px] md:min-w-[30%] md:-mb-[160px] about-sticky"
           ref={textRevealScope}
@@ -123,15 +123,17 @@ export const Works = () => {
                   key={index}
                   className="uppercase w-full flex selected-work-link will-change-scroll"
                 >
-                  <p className="text-xs w-[50px] md:mt-[64px] mt-[38px]">
+                  <p className="text-xs w-[50px] md:mt-[30px] mt-[20px]">
                     .{index < 9 ? `0${index + 1}` : `${index + 1}`}
                   </p>
-                  <div className="w-full border-b-[1px] border-b-[#101012] py-10 pr-10 flex items-center justify-between">
+                  <div className="w-full border-b-[1px] border-b-[#101012] md:py-10 py-5 pr-10 flex items-center justify-between">
                     <div>
-                      <p className="2xl:text-[64px] md:text-[52px]">
+                      <p className="2xl:text-[64px] md:text-[52px] text-2xl">
                         {work.title}
                       </p>
-                      <p className="text-sm">{work.subText}</p>
+                      <p className="md:text-sm text-[10px] md:mt-5">
+                        {work.subText}
+                      </p>
                     </div>
                     <div>
                       <ArrowRightIcon />
