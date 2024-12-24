@@ -100,14 +100,14 @@ export const AnimationContainer = ({
   return (
     <div ref={scope}>
       <div className="fixed top-0 left-0 w-full h-screen z-[300] bg-[#101012] text-white screen-loader">
-        <div className="flex h-full flex-col justify-between p-10 pb-0">
-          <div className="text-[40px] overflow-hidden">
+        <div className="flex h-full flex-col justify-between md:p-10 p-5 pb-0">
+          <div className="md:text-[40px] text-[20px] overflow-hidden">
             <h2 className="screen-loader-details">
               Inspirux clone is loading...
             </h2>
           </div>
           <div className="overflow-hidden text-end">
-            <h2 className="text-[200px] screen-loader-details leading-[105%]">
+            <h2 className="md:text-[200px] screen-loader-details md:leading-[105%] text-[5rem]">
               {count}%
             </h2>
           </div>

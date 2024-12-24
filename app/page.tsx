@@ -11,7 +11,7 @@ export default function Home() {
       <AnimationContainer>
         <Header />
         <Hero />
-        <div className="z-[10] relative">
+        <div className="z-[10] relative bg-[#f9faf7]">
           <HeroCTA />
           <About />
           <Works />

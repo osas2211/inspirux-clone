@@ -8,7 +8,7 @@ export const About = () => {
   const { scope: smallScope } = useTextReveal(".about-text-reveal-small")
   return (
     <div
-      className="w-full min-h-[100vh] bg-[#f9faf7] md:px-[40px] px-5 2xl:py-[180px] md:py-[130px] py-[70px] about-section"
+      className="w-full md:min-h-[100vh] my-0 bg-[#f9faf7] md:px-[40px] px-5 2xl:py-[180px] md:py-[130px] py-[70px] about-section"
       ref={scope}
     >
       <div className="uppercase md:text-sm text-xs md:sticky md:top-[70px] 2xl:min-w-[640.5px] md:min-w-[30%] md:-mb-[60px] mb-[30px] about-sticky">

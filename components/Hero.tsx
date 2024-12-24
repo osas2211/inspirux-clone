@@ -10,7 +10,7 @@ export const Hero = () => {
     >
       <div className="h-full w-full flex flex-col justify-between">
         <div></div>
-        <div className="2xl:text-[11.75rem] lg:text-[8rem] text-[3.75rem] md:p-[40px] p-5 2xl:leading-[160px] lg:leading-[110px] leading-[85%] hero-inner-text fixed md:bottom-[12vh] bottom-[37vh] left-0 w-full">
+        <div className="2xl:text-[11.75rem] lg:text-[8rem] text-[3.75rem] md:p-[40px] p-5 2xl:leading-[160px] lg:leading-[110px] leading-[85%] hero-inner-text fixed md:bottom-[12vh] bottom-[340px] left-0 w-full">
           <h2 className=" text-primary tracking-tight floating-text">
             Where ideas
           </h2>

@@ -57,14 +57,14 @@ export const Works = () => {
     <>
       <div className="bg-[#f9faf7] overflow-x-hidden">
         <div
-          className="py-[40px] pb-[100px] w-full flex flex-col items-center justify-center text-[15vw] leading-[105%] tracking-[-1vw] uppercase will-change-scroll"
+          className="py-[40px] pb-[50px] md:pb-[100px] w-full flex flex-col items-center justify-center md:text-[15vw] text-[16vw] leading-[105%] tracking-[-1vw] uppercase will-change-scroll"
           id="selected-works-text"
         >
           <h2 id="selected-works-left">Selected</h2>
           <div id="selected-works-right" className="flex gap-4 items-baseline">
             <div className="relative max-w-[326px] md:max-w-[326px]">
               <video
-                className="w-[100%] h-[211px] md:w-[100%] md:h-[201px] lg:h-[201px] object-cover rounded-lg"
+                className="w-[100%] h-[50px] md:w-[100%] md:h-[201px] lg:h-[201px] object-cover rounded-lg"
                 autoPlay
                 loop
                 muted
@@ -81,9 +81,9 @@ export const Works = () => {
           </div>
         </div>
       </div>
-      <div className="min-h-[340vh] pl-[40px] 2xl:py-[100px] md:py-[78px] bg-[#f9faf7] border-y-[1px] border-y-[#101012]">
+      <div className="min-h-[340vh] md:pl-[40px] pl-5 2xl:py-[100px] md:py-[78px] py-10 bg-[#f9faf7] border-y-[1px] border-y-[#101012]">
         <div
-          className="uppercase text-sm md:sticky md:top-[70px] 2xl:min-w-[640.5px] md:min-w-[30%] md:-mb-[160px] about-sticky"
+          className="uppercase md:text-sm text-xs md:sticky md:top-[70px] 2xl:min-w-[640.5px] md:min-w-[30%] md:-mb-[160px] about-sticky"
           ref={textRevealScope}
         >
           <p className="overflow-hidden">
@@ -107,7 +107,7 @@ export const Works = () => {
           <div className="mt-5">
             <Link
               href={""}
-              className="uppercase text-sm underline font-semibold"
+              className="uppercase md:text-sm text-xs underline font-semibold"
             >
               view all works
             </Link>
@@ -123,7 +123,7 @@ export const Works = () => {
                   key={index}
                   className="uppercase w-full flex selected-work-link will-change-scroll"
                 >
-                  <p className="text-xs w-[50px] mt-[64px]">
+                  <p className="text-xs w-[50px] md:mt-[64px] mt-[38px]">
                     .{index < 9 ? `0${index + 1}` : `${index + 1}`}
                   </p>
                   <div className="w-full border-b-[1px] border-b-[#101012] py-10 pr-10 flex items-center justify-between">
