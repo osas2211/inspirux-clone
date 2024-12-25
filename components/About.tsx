@@ -5,6 +5,7 @@ import React from "react"
 
 export const About = () => {
   const { scope } = useTextReveal(".about-text-reveal")
+  const {} = useTextReveal(".about-text-reveal-2")
   const { scope: smallScope } = useTextReveal(".about-text-reveal-small")
   return (
     <div
@@ -89,29 +90,29 @@ export const About = () => {
           <div className="2xl:mt-[50px] md:mt-[40px] mt-7 mb-[30px]">
             <div className="md:block hidden">
               <h2 className="overflow-hidden">
-                <span className="about-text-reveal">
+                <span className="about-text-reveal-2">
                   Our mission is to empower global enterprises to
                 </span>
               </h2>
               <h2 className="overflow-hidden about-last-text">
-                <span className="about-text-reveal">
+                <span className="about-text-reveal-2">
                   unlock their maximum capabilities.
                 </span>
               </h2>
             </div>
             <div className="md:hidden block">
               <h2 className="overflow-hidden">
-                <span className="about-text-reveal">
+                <span className="about-text-reveal-2">
                   Our mission is to empower global
                 </span>
               </h2>
               <h2 className="overflow-hidden about-last-text">
-                <span className="about-text-reveal">
+                <span className="about-text-reveal-2">
                   enterprises to unlock their maximum
                 </span>
               </h2>
               <h2 className="overflow-hidden about-last-text">
-                <span className="about-text-reveal">capabilities.</span>
+                <span className="about-text-reveal-2">capabilities.</span>
               </h2>
             </div>
           </div>

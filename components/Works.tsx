@@ -81,7 +81,7 @@ export const Works = () => {
           </div>
         </div>
       </div>
-      <div className="md:min-h-[340vh] md:pl-[40px] pl-5 2xl:py-[100px] md:py-[78px] py-10 bg-[#f9faf7] border-y-[1px] border-y-[#101012]">
+      <div className=" md:pl-[40px] pl-5 2xl:py-[100px] md:py-[78px] py-10 bg-[#f9faf7] border-y-[1px] border-y-[#101012]">
         <div
           className="uppercase md:text-sm text-xs md:sticky md:top-[70px] 2xl:min-w-[640.5px] md:min-w-[30%] md:-mb-[160px] about-sticky"
           ref={textRevealScope}
@@ -144,7 +144,7 @@ export const Works = () => {
             })}
 
             <div
-              className="text-[40px] uppercase mt-20"
+              className="text-[40px] uppercase md:mt-24 mt-7"
               ref={textRevealScopeLg}
             >
               <h2 className="overflow-hidden">

@@ -75,7 +75,7 @@ export const AnimationContainer = ({
         )
         .fromTo(
           scope.current?.querySelectorAll(".selected-work-link") as never,
-          { x: "30%", opacity: 0 },
+          { x: "30%", opacity: 0.7 },
           {
             ease: "power4.out",
             x: 0,
@@ -87,7 +87,7 @@ export const AnimationContainer = ({
               scrub: true,
               end: window?.matchMedia("(max-width: 760px)")?.matches
                 ? "+=1500px"
-                : "+=2500px",
+                : "+=2200px",
             },
           }
         )
