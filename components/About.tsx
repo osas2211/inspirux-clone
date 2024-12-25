@@ -27,7 +27,7 @@ export const About = () => {
           <span className="about-text-reveal">TRANSFORM BRANDS.</span>
         </p>
       </div>
-      <div className="flex font-medium">
+      <div className="flex">
         <div className="2xl:min-w-[640.5px] md:min-w-[30%]"></div>
         <div className="2xl:text-[40px] md:text-[32px] text-[19px] relative about-text md:w-[70%] w-full">
           <div className="md:block hidden">

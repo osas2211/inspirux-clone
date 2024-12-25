@@ -29,6 +29,11 @@
   background: #b3ec11;
 }
 
+::selection {
+  color: #101012;
+  background: #b3ec11;
+}
+
 .signal-line-link {
   position: relative;
   overflow-x: hidden;
