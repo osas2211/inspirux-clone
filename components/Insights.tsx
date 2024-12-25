@@ -2,6 +2,7 @@
 "use client"
 import { useRevealLeft } from "@/hooks/useRevealLeft"
 import { useTextReveal } from "@/hooks/useTextReveal"
+import { ArrowRightIcon } from "@/icons/ArrowRightIcon"
 import gsap from "gsap"
 import Link from "next/link"
 import React, { useEffect } from "react"
@@ -17,16 +18,37 @@ export const Insights = () => {
   useEffect(() => {
     gsap.to(".featured-image-clip", {
       clipPath: "polygon(0 0, 0% 0, 0% 100%, 0 100%)",
-      ease: "expo.out",
+      ease: "expoScale(0.5,7,power2.inOut)",
+      duration: 1,
       scrollTrigger: {
         trigger: ".featured-image-clip",
         scrub: true,
         end: window?.matchMedia("(max-width: 760px)")?.matches
           ? "+=700px"
-          : "+=1500px",
+          : "+=850px",
       },
     })
   }, [])
+  const insights = [
+    {
+      title:
+        "Revolutionizing User Experience: Top UI/UX Design Trends for 2024",
+      subText: "website + web app portal",
+      img: "/assets/insight1.png",
+    },
+    {
+      title: "Unlocking Your Potential: Beyond the Title of “Designer”",
+      subText: "website redesign + art direction",
+      img: "/assets/insight2.png",
+    },
+    {
+      title:
+        "Mastering the Art of Landing Page Design: Your Ultimate Guideline for Perfection",
+      subText:
+        "In the fast-paced digital world, first impressions matter more than ever...",
+      img: "/assets/insight3.png",
+    },
+  ]
   return (
     <div className="bg-[#d4d9d7] w-full md:pl-[40px] pl-5 2xl:py-[160px] md:py-[78px] py-10">
       <div className="uppercase md:text-sm text-[10px] md:sticky md:top-[70px] 2xl:min-w-[640.5px] md:min-w-[30%] md:-mb-[120px] mb-[30px] about-sticky">
@@ -108,67 +130,35 @@ export const Insights = () => {
             className="w-full overflow-x-hidden md:mt-16 mt-7"
             id="selected-insight-links"
           >
-            <div className="uppercase w-full flex selected-result-link will-change-scroll cursor-pointer">
-              <div
-                className={`w-full border-b-[1px] border-[#101012]/70 md:py-14 py-5 md:pr-10 pr-5 flex items-center justify-between line-bottom before:bg-black`}
-              >
-                <div className="w-full">
-                  <div className="grid grid-cols-3 justify-between w-full">
+            {insights.map((insight, index) => {
+              return (
+                <div
+                  key={index}
+                  className="w-full flex md:flex-row flex-col md:gap-10 gap-5 selected-insight-link will-change-scroll border-b-[1px] border-b-[#101012]/70 md:py-[30px] py-5 md:pr-10 pr-5 line-bottom before:bg-black cursor-pointer"
+                >
+                  <div className="h-[120px] md:w-[200px] w-[150px] featured-image rounded-xl">
+                    <img
+                      alt=""
+                      src={insight.img}
+                      className="w-full h-full rounded-xl object-cover object-center"
+                    />
+                  </div>
+                  <div className="w-full flex items-center justify-between">
                     <div>
-                      <p className="2xl:text-8xl md:text-[52px] text-2xl font-semibold">
-                        13
+                      <p className="2xl:text-[40px] md:text-[32px] text-[20px] leading-[125%] max-w-[850px] tracking-tight text-2xl">
+                        {insight.title}
                       </p>
-                      <p className="md:text-sm text-[12px]">Skilled members</p>
+                      <p className="md:text-sm text-[10px] md:mt-2 mt-1">
+                        {insight.subText}
+                      </p>
                     </div>
-                    <div>
-                      <p className="2xl:text-8xl md:text-[52px] text-2xl font-semibold">
-                        7
-                      </p>
-                      <p className="md:text-sm text-[12px]">years of growth</p>
-                    </div>
-                    <div>
-                      <p className="2xl:text-8xl md:text-[52px] text-2xl font-semibold">
-                        70+
-                      </p>
-                      <p className="md:text-sm text-[12px]">
-                        SATISFIED CLIENTS
-                      </p>
+                    <div className="rotate-icon md:mt-0 mt-[-25%] md:scale-100 scale-[0.6]">
+                      <ArrowRightIcon />
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            <div className="uppercase w-full flex selected-result-link will-change-scroll cursor-pointer">
-              <div
-                className={`w-full border-b-[1px] border-[#101012]/70 md:py-14 py-5 md:pr-10 pr-5 flex items-center justify-between line-bottom before:bg-black`}
-              >
-                <div className="w-full">
-                  <div className="grid grid-cols-3 justify-between w-full">
-                    <div>
-                      <p className="2xl:text-8xl md:text-[52px] text-2xl font-semibold">
-                        $10M+
-                      </p>
-                      <p className="md:text-sm text-[12px]">clients raised</p>
-                    </div>
-                    <div>
-                      <p className="2xl:text-8xl md:text-[52px] text-2xl font-semibold">
-                        300%
-                      </p>
-                      <p className="md:text-sm text-[12px]">
-                        ONBOARDING CONVERSION RATE
-                      </p>
-                    </div>
-                    <div>
-                      <p className="2xl:text-8xl md:text-[52px] text-2xl font-semibold">
-                        10
-                      </p>
-                      <p className="md:text-sm text-[12px]">AWARDS</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+              )
+            })}
           </div>
         </div>
       </div>
