@@ -126,7 +126,7 @@ export const Works = () => {
                   <p className="text-xs w-[50px] md:mt-[30px] mt-[20px]">
                     .{index < 9 ? `0${index + 1}` : `${index + 1}`}
                   </p>
-                  <div className="w-full border-b-[1px] border-b-[#101012] md:py-10 py-5 md:pr-10 pr-5 flex items-center justify-between">
+                  <div className="w-full border-b-[1px] border-b-[#101012]/70 md:py-10 py-5 md:pr-10 pr-5 flex items-center justify-between line-bottom before:bg-black cursor-pointer">
                     <div>
                       <p className="2xl:text-[64px] md:text-[52px] text-2xl">
                         {work.title}
@@ -135,7 +135,7 @@ export const Works = () => {
                         {work.subText}
                       </p>
                     </div>
-                    <div>
+                    <div className="rotate-icon">
                       <ArrowRightIcon />
                     </div>
                   </div>
@@ -144,7 +144,7 @@ export const Works = () => {
             })}
 
             <div
-              className="text-[40px] uppercase md:mt-24 mt-7"
+              className="2xl:text-[40px] md:text-[32px] text-[19px] uppercase md:mt-24 mt-7"
               ref={textRevealScopeLg}
             >
               <h2 className="overflow-hidden">

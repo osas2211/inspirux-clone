@@ -3,7 +3,7 @@ import { useRevealLeft } from "@/hooks/useRevealLeft"
 import { useTextReveal } from "@/hooks/useTextReveal"
 import gsap from "gsap"
 import Link from "next/link"
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 
 export const Services = () => {
   const {} = useTextReveal(".services-text-reveal", false)
@@ -40,7 +40,10 @@ export const Services = () => {
         // end: "+=800px",
       },
     })
+    gsap.set(`.selected-service-inner`, { translateY: "-120%", height: 0 })
   }, [])
+
+  const [active, setActive] = useState(-1)
 
   return (
     <div>
@@ -96,7 +99,7 @@ export const Services = () => {
                 </span>
               </h2>
             </div>
-            <div className="md:hidden block">
+            <div className="md:hidden block pr-4">
               <h2 className="overflow-hidden">
                 <span className="services-text-reveal">
                   EXPERTISE — From initial exploration
@@ -119,21 +122,105 @@ export const Services = () => {
               id="selected-service-links"
             >
               {services.map((service, index) => {
+                const isActive = index === active
+
                 return (
                   <div
                     key={index}
                     className="uppercase w-full flex selected-service-link will-change-scroll cursor-pointer"
+                    onClick={() => {
+                      if (isActive) {
+                        setActive(-1)
+                        gsap.to(`.selected-service-inner-${index}`, {
+                          // translateY: "-120%",
+                          height: 0,
+                          ease: "power1.out",
+                          opacity: 0,
+                          duration: 0.5,
+                        })
+                      } else {
+                        gsap.to(`.selected-service-inner-${active}`, {
+                          // translateY: "-120%",
+                          height: 0,
+                          ease: "power1.out",
+                          opacity: 0,
+                          duration: 0.5,
+                        })
+                        setActive(index)
+                        gsap.to(`.selected-service-inner-${index}`, {
+                          translateY: 0,
+                          height: "auto",
+                          opacity: 1,
+                        })
+                      }
+                    }}
                   >
                     <p className="text-xs w-[50px] md:mt-[30px] mt-[20px] text-primary">
-                      .{index < 4 ? `0${index + 1}` : `${index + 1}`}
+                      .{index < 9 ? `0${index + 1}` : `${index + 1}`}
                     </p>
-                    <div className="w-full border-b-[1px] border-b-[#f9faf7]/10 md:py-10 py-5 md:pr-10 pr-5 flex items-center justify-between">
-                      <div>
-                        <p className="2xl:text-[64px] md:text-[52px] text-2xl">
-                          {service.title}
-                        </p>
+                    <div
+                      className={`w-full border-b-[1px] ${
+                        isActive ? "border-b-primary" : "border-b-[#f9faf7]/10"
+                      } md:py-10 py-5 md:pr-10 pr-5 flex items-center justify-between line-bottom ${
+                        isActive ? "before:bg-transparent" : "before:bg-primary"
+                      }`}
+                    >
+                      <div className="w-full">
+                        <div className="flex items-center justify-between w-full">
+                          <p className="2xl:text-[64px] md:text-[52px] text-2xl">
+                            {service.title}
+                          </p>
+                          <div
+                            className={`font-mono font-extralight transition-all duration-[0.5s] ${
+                              isActive ? "-rotate-45" : "rotate-0"
+                            }`}
+                          >
+                            +
+                          </div>
+                        </div>
+                        <div className="overflow-hidden transition-all">
+                          <div
+                            style={{
+                              textTransform: "none",
+                            }}
+                            className={`selected-service-inner selected-service-inner-${index}`}
+                          >
+                            <p
+                              className={`max-w-[550px] md:pt-[30px] pt-5 md:text-[16px] text-sm md:leading-[24px] leading-[22px]`}
+                            >
+                              We&apos;re like treasure hunters, uncovering gems
+                              of insight to chart your path to growth and
+                              genuine connections. With strategies as unique as
+                              fingerprints, we navigate complexities, turning
+                              challenges into stepping stones for success.
+                            </p>
+
+                            <div className="md:mt-20 mt-7 flex flex-wrap text-[#eee]/50 text-xs uppercase gap-1">
+                              <p className="border-[1px] border-[#eee]/50 px-3 py-2 rounded-full">
+                                app design
+                              </p>
+                              <p className="border-[1px] border-[#eee]/50 px-3 py-2 rounded-full">
+                                native app
+                              </p>
+                              <p className="border-[1px] border-[#eee]/50 px-3 py-2 rounded-full">
+                                prototype design
+                              </p>
+                              <p className="border-[1px] border-[#eee]/50 px-3 py-2 rounded-full">
+                                ui design
+                              </p>
+                              <p className="border-[1px] border-[#eee]/50 px-3 py-2 rounded-full">
+                                mobile app testing
+                              </p>
+                              <p className="border-[1px] border-[#eee]/50 px-3 py-2 rounded-full">
+                                app testing
+                              </p>
+                              <p className="border-[1px] border-[#eee]/50 px-3 py-2 rounded-full">
+                                react app
+                              </p>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div>+</div>
                     </div>
                   </div>
                 )
