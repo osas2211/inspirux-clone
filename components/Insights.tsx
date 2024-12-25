@@ -21,7 +21,9 @@ export const Insights = () => {
       scrollTrigger: {
         trigger: ".featured-image-clip",
         scrub: true,
-        end: "+=700px",
+        end: window?.matchMedia("(max-width: 760px)")?.matches
+          ? "+=700px"
+          : "+=1500px",
       },
     })
   }, [])
