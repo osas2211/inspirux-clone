@@ -34,7 +34,7 @@ export const TrackRecords = () => {
   )
 
   return (
-    <div className="bg-[#f9faf7] w-full md:pl-[40px] pl-5 2xl:py-[160px] md:py-[78px] py-10">
+    <div className="bg-[#f9faf7] w-full md:pl-[40px] pl-5 2xl:pb-[160px] md:pb-[78px] py-10">
       <div className="uppercase md:text-sm text-[10px] md:sticky md:top-[70px] 2xl:min-w-[640.5px] md:min-w-[30%] md:-mb-[90px] mb-[30px] about-sticky">
         <p className="overflow-hidden">
           <span className="track-record-text-reveal">OUR TRACK RECORD OF</span>

@@ -3,6 +3,7 @@ import { AnimationContainer } from "@/components/AnimationContainer"
 import { Header } from "@/components/Header"
 import { Hero } from "@/components/Hero"
 import { HeroCTA } from "@/components/HeroCTA"
+import { Insights } from "@/components/Insights"
 import { Results } from "@/components/Results"
 import { Services } from "@/components/Services"
 import { TrackRecords } from "@/components/TrackRecords"
@@ -21,6 +22,7 @@ export default function Home() {
           <Services />
           <Results />
           <TrackRecords />
+          <Insights />
         </div>
       </AnimationContainer>
     </div>
