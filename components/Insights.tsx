@@ -12,7 +12,7 @@ export const Insights = () => {
   const { scope } = useRevealLeft({
     target: ".selected-insight-link",
     trigger: "#selected-insight-links",
-    mobileEnd: "+=700px",
+    mobileEnd: "+=1500px",
     desktopEnd: "+=1500px",
   })
   useEffect(() => {
