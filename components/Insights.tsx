@@ -21,7 +21,7 @@ export const Insights = () => {
       scrollTrigger: {
         trigger: ".featured-image-clip",
         scrub: true,
-        end: "+=400px",
+        end: "+=700px",
       },
     })
   }, [])
@@ -87,7 +87,7 @@ export const Insights = () => {
                 alt=""
                 className="w-full h-full rounded-2xl object-cover object-center "
               />
-              <div className="featured-image-clip absolute top-0 left-0 bg-[#d4d9d7] z-[10] w-full h-full" />
+              <div className="featured-image-clip absolute top-0 left-0 bg-[#d4d9d7] z-[10] w-full h-full rounded-2xl" />
             </div>
 
             <div>
