@@ -9,7 +9,7 @@ export const Results = () => {
   const { scope } = useRevealLeft({
     target: ".selected-result-link",
     trigger: "#selected-result-links",
-    mobileEnd: "+=700px",
+    mobileEnd: "+=1500px",
     desktopEnd: "+=1500px",
   })
 
@@ -82,7 +82,7 @@ export const Results = () => {
                 className={`w-full border-b-[1px] border-[#101012]/70 md:py-14 py-5 md:pr-10 pr-5 flex items-center justify-between line-bottom before:bg-black`}
               >
                 <div className="w-full">
-                  <div className="grid grid-cols-3 justify-between w-full">
+                  <div className="grid md:grid-cols-3 gap-4 justify-between w-full">
                     <div>
                       <p className="2xl:text-8xl md:text-[52px] text-2xl font-semibold">
                         13
@@ -113,7 +113,7 @@ export const Results = () => {
                 className={`w-full border-b-[1px] border-[#101012]/70 md:py-14 py-5 md:pr-10 pr-5 flex items-center justify-between line-bottom before:bg-black`}
               >
                 <div className="w-full">
-                  <div className="grid grid-cols-3 justify-between w-full">
+                  <div className="grid md:grid-cols-3 gap-4 justify-between w-full">
                     <div>
                       <p className="2xl:text-8xl md:text-[52px] text-2xl font-semibold">
                         $10M+
