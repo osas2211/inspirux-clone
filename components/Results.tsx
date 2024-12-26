@@ -1,4 +1,5 @@
 "use client"
+import { useCounter } from "@/hooks/useCounter"
 import { useRevealLeft } from "@/hooks/useRevealLeft"
 import { useTextReveal } from "@/hooks/useTextReveal"
 import Link from "next/link"
@@ -6,11 +7,28 @@ import React from "react"
 
 export const Results = () => {
   const {} = useTextReveal(".results-text-reveal", false)
+  const [skilledWorkers, play_skilledWorkers] = useCounter(0, 13)
+  const [years_of_growth, play_years_of_growth] = useCounter(0, 7)
+  const [satisfied_clients, play_satisfied_clients] = useCounter(0, 70)
+  const [clients_raised, play_clients_raised] = useCounter(0, 10)
+  const [conversion_rate, play_conversion_rate] = useCounter(0, 300)
+  const [awards, play_awards] = useCounter(0, 10)
+
+  const playCounter = () => {
+    play_skilledWorkers()
+    play_years_of_growth()
+    play_satisfied_clients()
+    play_clients_raised()
+    play_conversion_rate()
+    play_awards()
+  }
+
   const { scope } = useRevealLeft({
     target: ".selected-result-link",
     trigger: "#selected-result-links",
     mobileEnd: "+=1200px",
     desktopEnd: "+=1500px",
+    onStart: playCounter,
   })
 
   return (
@@ -85,19 +103,19 @@ export const Results = () => {
                   <div className="grid md:grid-cols-3 gap-4 justify-between w-full">
                     <div>
                       <p className="2xl:text-8xl md:text-[52px] text-2xl font-semibold">
-                        13
+                        {skilledWorkers}
                       </p>
                       <p className="md:text-sm text-[12px]">Skilled members</p>
                     </div>
                     <div>
                       <p className="2xl:text-8xl md:text-[52px] text-2xl font-semibold">
-                        7
+                        {years_of_growth}
                       </p>
                       <p className="md:text-sm text-[12px]">years of growth</p>
                     </div>
                     <div>
                       <p className="2xl:text-8xl md:text-[52px] text-2xl font-semibold">
-                        70+
+                        {satisfied_clients}+
                       </p>
                       <p className="md:text-sm text-[12px]">
                         SATISFIED CLIENTS
@@ -116,13 +134,13 @@ export const Results = () => {
                   <div className="grid md:grid-cols-3 gap-4 justify-between w-full">
                     <div>
                       <p className="2xl:text-8xl md:text-[52px] text-2xl font-semibold">
-                        $10M+
+                        ${clients_raised}M+
                       </p>
                       <p className="md:text-sm text-[12px]">clients raised</p>
                     </div>
                     <div>
                       <p className="2xl:text-8xl md:text-[52px] text-2xl font-semibold">
-                        300%
+                        {conversion_rate}%
                       </p>
                       <p className="md:text-sm text-[12px]">
                         ONBOARDING CONVERSION RATE
@@ -130,7 +148,7 @@ export const Results = () => {
                     </div>
                     <div>
                       <p className="2xl:text-8xl md:text-[52px] text-2xl font-semibold">
-                        10
+                        {awards}
                       </p>
                       <p className="md:text-sm text-[12px]">AWARDS</p>
                     </div>

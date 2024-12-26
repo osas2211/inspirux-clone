@@ -7,11 +7,13 @@ export const useRevealLeft = ({
   trigger,
   mobileEnd,
   desktopEnd,
+  onStart,
 }: {
   target: string
   trigger: string
   mobileEnd: string
   desktopEnd: string
+  onStart?: () => void
 }) => {
   const scope: React.Ref<HTMLDivElement | null> = useRef(null)
   const timeline = useRef(gsap.timeline({ paused: true }))
@@ -33,6 +35,11 @@ export const useRevealLeft = ({
             end: window?.matchMedia("(max-width: 760px)")?.matches
               ? mobileEnd
               : desktopEnd,
+          },
+          onStart: () => {
+            if (onStart) {
+              onStart()
+            }
           },
         }
       )

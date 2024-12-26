@@ -18,8 +18,8 @@ export const AnimationContainer = ({
     // const progress = Number(tl.current.progress() * 100).toFixed(0)
     // setCount(Number(progress))
 
-    const duration = 5000 // Total duration in ms (3 seconds)
-    const interval = 50 // Update every 30ms
+    const duration = 5000 // Total duration in ms (5 seconds)
+    const interval = 50 // Update every 50ms
     const increment = 300 / (duration / interval) // Amount to increment per interval
 
     const timer = setInterval(() => {

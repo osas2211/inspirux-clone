@@ -6,18 +6,23 @@ import React, { useEffect, useRef, useState } from "react"
 export const HeroCTA = () => {
   const [showVideo, setShowVideo] = useState(false)
   const playRef: React.Ref<HTMLDivElement> = useRef(null)
+  const videoRef: React.Ref<HTMLVideoElement> = useRef(null)
+
   const toggleVideo = () => setShowVideo(!showVideo)
   useEffect(() => {
     playRef.current?.addEventListener("mouseenter", () => {
       toggleVideo()
+      // videoRef.current?.play()
     })
     playRef.current?.addEventListener("mouseleave", () => {
       toggleVideo()
+      // videoRef.current?.pause()
     })
 
-    // return ()=> {
-    //   playRef.current?.removeEventListener("mouseleave", ()=> {})
-    // }
+    return () => {
+      playRef.current?.removeEventListener("mouseleave", () => {})
+      playRef.current?.removeEventListener("mouseenter", () => {})
+    }
   }, [showVideo])
   return (
     <>
@@ -32,7 +37,13 @@ export const HeroCTA = () => {
           ref={playRef}
         >
           {showVideo ? (
-            <video className="w-full h-full object-cover" autoPlay loop muted>
+            <video
+              ref={videoRef}
+              className="w-full h-full object-cover"
+              loop
+              muted
+              autoPlay
+            >
               <source
                 src="/assets/videos/selected-works-vid.mp4"
                 type="video/mp4"
