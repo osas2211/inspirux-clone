@@ -1,5 +1,6 @@
 import { About } from "@/components/About"
 import { AnimationContainer } from "@/components/AnimationContainer"
+import { Footer } from "@/components/Footer"
 import { Header } from "@/components/Header"
 import { Hero } from "@/components/Hero"
 import { HeroCTA } from "@/components/HeroCTA"
@@ -23,6 +24,7 @@ export default function Home() {
           <Results />
           <TrackRecords />
           <Insights />
+          <Footer />
         </div>
       </AnimationContainer>
     </div>

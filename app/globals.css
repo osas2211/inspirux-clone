@@ -120,3 +120,19 @@
 .featured-image-clip {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
+.show-social-image > div {
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.show-social-image span:hover + div {
+  opacity: 1;
+}
+
+.mail-arrow {
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.mail-address:hover .mail-arrow {
+  transform: rotate(90deg);
+}
