@@ -9,7 +9,7 @@ export const Results = () => {
   const { scope } = useRevealLeft({
     target: ".selected-result-link",
     trigger: "#selected-result-links",
-    mobileEnd: "+=1500px",
+    mobileEnd: "+=1200px",
     desktopEnd: "+=1500px",
   })
 
