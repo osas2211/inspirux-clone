@@ -136,3 +136,7 @@
 .mail-address:hover .mail-arrow {
   transform: rotate(90deg);
 }
+
+#mobile-menu {
+  clip-path: circle(0% at 100% 0%);
+}
