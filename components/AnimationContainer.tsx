@@ -38,7 +38,19 @@ export const AnimationContainer = ({
 
   useGSAP(
     () => {
+      gsap.fromTo(
+        ".loading-dot",
+        { opacity: 0 },
+        {
+          opacity: 1,
+          stagger: 0.3,
+          duration: 0.3,
+          ease: "power1.out",
+          repeat: -1,
+        }
+      )
       timeline.current
+
         .to(".screen-loader-details", {
           y: "-120%",
           opacity: 0,
@@ -53,6 +65,7 @@ export const AnimationContainer = ({
           duration: 1.5,
           ease: "power4.out",
         })
+
         .fromTo(
           "#selected-works-left",
           { x: "-50%" },
@@ -106,11 +119,14 @@ export const AnimationContainer = ({
         <div className="flex h-full flex-col justify-between md:p-10 p-5 md:pb-0">
           <div className="md:text-[40px] text-[20px] overflow-hidden">
             <h2 className="screen-loader-details">
-              Inspirux clone is loading...
+              Inspirux clone is loading
+              <span className="loading-dot">.</span>
+              <span className="loading-dot">.</span>
+              <span className="loading-dot">.</span>
             </h2>
           </div>
           <div className="overflow-hidden text-end">
-            <h2 className="md:text-[200px] screen-loader-details md:leading-[105%] text-[5rem]">
+            <h2 className="md:text-[200px] screen-loader-details md:leading-[105%] text-[3rem] md:pb-0 pb-5">
               {count}%
             </h2>
           </div>
