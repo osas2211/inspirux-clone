@@ -2,26 +2,29 @@
 "use client"
 import gsap from "gsap"
 import Link from "next/link"
-import React, { useEffect } from "react"
+import React, { useEffect, useRef } from "react"
 
 export const Footer = () => {
+  const scope = useRef(null)
   useEffect(() => {
-    gsap.fromTo(
-      ".footermarquee",
-      {
-        y: 400,
-      },
-      {
-        y: 0,
-        // ease: "power4.out",
-        scrollTrigger: { trigger: ".footermarquee", scrub: true },
-      }
-    )
+    gsap.matchMedia(scope).add("(min-width:760px)", () => {
+      gsap.fromTo(
+        ".footermarquee",
+        {
+          y: 400,
+        },
+        {
+          y: 0,
+          // ease: "power4.out",
+          scrollTrigger: { trigger: ".footermarquee", scrub: true },
+        }
+      )
+    })
   }, [])
 
   return (
     <>
-      <div className="relative">
+      <div className="relative" ref={scope}>
         <div
           className="bg-[#101012] text-[#eee] w-full md:pl-[40px] pl-5 2xl:py-[70px] md:py-[48px] py-10 overflow-hidden z-[20] relative"
           id="footer-section"
@@ -212,12 +215,12 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="bg-primary pt-0 sticky bottom-0 left-0 w-full h-auto">
-          <div className="overflow-hidden h-[350px] footermarquee bg-primary">
+        <div className="bg-primary pt-0 md:sticky bottom-0 left-0 w-full h-auto">
+          <div className="overflow-hidden md:h-[350px] h-[150px] footermarquee bg-primary">
             <img
               src="/assets/footermarquee.svg"
               alt=""
-              className="w-full scale-[1.4] h-full ml-20 mt-28"
+              className="w-full md:scale-[1.4] scale-[1] h-full md:ml-20 md:mt-28"
             />
           </div>
         </div>
