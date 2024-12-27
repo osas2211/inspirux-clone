@@ -9,6 +9,12 @@
   background-attachment: fixed;
 }
 
+@media (max-width: 500px) {
+  .home-hero {
+    background-image: url(/assets/inspirux-hero-mobile.png);
+  }
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
